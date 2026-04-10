@@ -100,7 +100,12 @@ export function ShoppingPanel({ cart, tenantName, loyaltyName, suggestedProducts
                   className={`flex-1 py-2.5 rounded-lg text-xs font-medium border-2 transition-all ${delivery === m ? "border-current text-white" : "border-gray-200 text-gray-500 bg-white"}`}
                   style={delivery === m ? { backgroundColor: "var(--tenant-primary)", borderColor: "var(--tenant-primary)" } : undefined}
                 >
-                  {m === "bezorgen" ? "Thuisbezorgd (PostNL)" : "Ophalen in winkel"}
+                  {m === "bezorgen" ? (
+                    <span className="flex items-center gap-1.5 justify-center">
+                      <img src="https://www.postnl.nl/etc.clientlibs/postnl/clientlibs/clientlib-base/resources/img/postnl-logo.svg" alt="PostNL" className="h-3.5 inline" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                      Thuisbezorgd
+                    </span>
+                  ) : "Ophalen in winkel"}
                 </button>
               ))}
             </div>
@@ -231,7 +236,12 @@ export function ShoppingPanel({ cart, tenantName, loyaltyName, suggestedProducts
               <span className="text-sm">📦</span>
               <div>
                 <p className="text-xs font-medium text-gray-700">
-                  {delivery === "bezorgen" ? `PostNL — ${tomorrow}` : `Ophalen morgen vanaf 10:00`}
+                  {delivery === "bezorgen" ? (
+                    <span className="flex items-center gap-1.5">
+                      <img src="https://www.postnl.nl/etc.clientlibs/postnl/clientlibs/clientlib-base/resources/img/postnl-logo.svg" alt="PostNL" className="h-3 inline" onError={(e) => { (e.target as HTMLImageElement).replaceWith(document.createTextNode('PostNL')) }} />
+                      <span>— {tomorrow}</span>
+                    </span>
+                  ) : `Ophalen morgen vanaf 10:00`}
                 </p>
                 {delivery === "bezorgen" && address.street && (
                   <p className="text-[11px] text-gray-400">{address.street}, {address.postalCode} {address.city}</p>
@@ -246,12 +256,14 @@ export function ShoppingPanel({ cart, tenantName, loyaltyName, suggestedProducts
 
           {delivery === "bezorgen" && (
             <div className="bg-white rounded-lg p-3 border border-gray-100">
-              <p className="text-[11px] text-gray-500 mb-1">Track & Trace</p>
-              <p className="text-xs font-mono text-gray-700 mb-2">{trackingCode}</p>
+              <div className="flex items-center gap-2 mb-2">
+                <img src="https://www.postnl.nl/etc.clientlibs/postnl/clientlibs/clientlib-base/resources/img/postnl-logo.svg" alt="PostNL" className="h-4" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                <p className="text-[11px] text-gray-500">Track & Trace</p>
+              </div>
+              <p className="text-xs font-mono text-gray-700 mb-2 bg-gray-50 px-2 py-1 rounded">{trackingCode}</p>
               <a href={`https://postnl.nl/tracktrace/?B=${trackingCode}&P=${address.postalCode.replace(/\s/g, "")}&D=NL`}
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-md text-white"
-                style={{ backgroundColor: "var(--tenant-primary)" }}>
+                className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md text-white bg-[#EC6E0A] hover:bg-[#D4630A] transition-colors">
                 Volg je pakket
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               </a>

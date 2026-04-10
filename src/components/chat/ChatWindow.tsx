@@ -226,7 +226,7 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
   }
 
   function handleCheckout() {
-    sendMessage("Ik wil afrekenen");
+    // Checkout is handled entirely in the RHS ShoppingPanel
   }
 
   function handleSuggestedQuestion(question: string) {

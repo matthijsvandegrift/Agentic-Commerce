@@ -53,17 +53,7 @@ export function CartSummary({ cart, onCheckout }: CartSummaryProps) {
           &euro;{cart.total.toFixed(2).replace(".", ",")}
         </span>
       </div>
-      {onCheckout && (
-        <div className="px-4 py-3">
-          <button
-            onClick={onCheckout}
-            className="w-full py-2.5 rounded-xl text-white font-medium text-sm transition-opacity hover:opacity-90 active:scale-[0.98]"
-            style={{ backgroundColor: "var(--tenant-primary)" }}
-          >
-            Afrekenen
-          </button>
-        </div>
-      )}
+      {/* Checkout is handled in the RHS shopping panel */}
     </div>
   );
 }
