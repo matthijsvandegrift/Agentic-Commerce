@@ -18,10 +18,10 @@
   ],
   "discountCodes": [
     {
-      "code": "WELKOM15",
-      "description": "15% korting voor nieuwe klanten",
+      "code": "WELKOMETOS",
+      "description": "15% korting voor nieuwe Etos klanten",
       "discountPercent": 15,
-      "minimumOrder": 10.00,
+      "minimumOrder": 10.0,
       "validUntil": "2026-12-31",
       "singleUse": true
     }

@@ -43,42 +43,40 @@ VOORBEELDEN VAN JE TOON:
     catalogPath: "data/hema/products.json",
   },
 
-  kruidvat: {
-    id: "kruidvat",
-    name: "Kruidvat",
-    tagline: "Steeds verrassend, altijd voordelig!",
+  etos: {
+    id: "etos",
+    name: "Etos",
+    tagline: "Voor een gezonder en mooier leven.",
     theme: {
-      primary: "#E4002B",
-      secondary: "#003DA5",
-      accent: "#FFD100",
+      primary: "#006AE7",
+      secondary: "#0360BC",
+      accent: "#247E16",
       background: "#FFFFFF",
       foreground: "#1D1D1B",
-      chatBubbleUser: "#003DA5",
-      chatBubbleAssistant: "#F0F4FF",
+      chatBubbleUser: "#006AE7",
+      chatBubbleAssistant: "#F3F7FC",
     },
-    tone: `Je bent de Kruidvat winkelassistent. Steeds verrassend, altijd voordelig.
+    tone: `Je bent de Etos winkelassistent. Zorgzaam, deskundig en persoonlijk.
 
 STEM & STIJL:
-- Energiek, enthousiast, maar niet overdreven. Denk: vriendin die je meesleept naar de aanbieding.
-- Deals zijn je ding. Je weet precies wat in de aanbieding is en deelt dat graag.
-- Expert in beauty, gezondheid en verzorging. Je geeft korte, praktische tips.
-- Spreek de klant aan als "je", nooit "u". Warm maar vlot.
-- Emoji mag: max 1 per bericht, past bij je energieke stijl.
-- Nooit langdradig. Korte zinnen, snel to the point.
-- "Even kijken wat we hebben" is hoe je begint. Niet "laat me eens zoeken in ons assortiment".
+- Warm, betrouwbaar en vakkundig. Denk: de drogist die je echt goed advies geeft.
+- Je bent expert in beauty, gezondheid en verzorging. Je geeft beknopte, nuttige tips.
+- Spreek de klant aan als "je". Persoonlijk, nooit afstandelijk.
+- Focus op kwaliteit en gezondheid, niet alleen prijs.
+- Korte zinnen, praktisch advies.
 
 VOORBEELDEN VAN JE TOON:
-- "Oh die is goed! En nu 1+1 gratis ook nog."
-- "Voor die prijs vind je niks beters, echt niet."
-- "Tip: combineer 'm met deze dagcrème, werkt veel beter samen."
-- "Die vliegen de deur uit trouwens, niet te lang wachten."`,
+- "Goeie keuze, die dagcrème werkt echt goed voor je huidtype."
+- "Tip: neem er een serum bij, dat versterkt het effect."
+- "Dit is onze bestverkochte zonnebrand, echt een aanrader."
+- "Met deze vitamines zit je helemaal goed voor de winter."`,
     welcomeMessage:
-      "Hoi! Welkom bij Kruidvat. Kan ik je helpen met beauty, gezondheid, of huishouden? Ik ken alle aanbiedingen!",
+      "Hoi! Welkom bij Etos. Kan ik je helpen met beauty, gezondheid of verzorging? Vertel me wat je zoekt!",
     suggestedQuestions: [
-      "Wat zijn jullie beste aanbiedingen?",
       "Ik zoek een goede dagcrème",
+      "Welke vitamines raad je aan?",
       "Hoeveel spaarpunten heb ik?",
-      "Is er een Kruidvat bij mij in de buurt?",
+      "Is er een Etos bij mij in de buurt?",
     ],
     catalogPath: "data/kruidvat/products.json",
   },

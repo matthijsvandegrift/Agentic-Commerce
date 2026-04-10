@@ -1,11 +1,11 @@
 {
-  "programName": "Kruidvat Voordelen",
+  "programName": "Etos Bonuskaart",
   "customer": {
     "name": "Sophie Jansen",
-    "memberId": "KV-5839201",
+    "memberId": "ET-5839201",
     "tier": "Goud",
     "points": 3800,
-    "pointsValue": 19.00,
+    "pointsValue": 19.0,
     "tierThresholds": {
       "Standaard": 0,
       "Zilver": 1500,
@@ -18,14 +18,19 @@
     {
       "orderId": "KV-ORD-1234",
       "date": "2026-04-05",
-      "items": ["L'Oréal Elvive Shampoo", "Nivea Dagcrème"],
+      "items": [
+        "L'Oréal Elvive Shampoo",
+        "Nivea Dagcrème"
+      ],
       "total": 11.98,
       "pointsEarned": 24
     },
     {
       "orderId": "KV-ORD-1190",
       "date": "2026-03-22",
-      "items": ["Pampers Luiers Maat 4"],
+      "items": [
+        "Pampers Luiers Maat 4"
+      ],
       "total": 14.99,
       "pointsEarned": 30
     }

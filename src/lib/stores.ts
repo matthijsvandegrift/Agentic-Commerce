@@ -1,5 +1,5 @@
 import hemaStores from "@/data/hema/stores.json";
-import kruidvatStores from "@/data/kruidvat/stores.json";
+import etosStores from "@/data/kruidvat/stores.json";
 
 export interface Store {
   id: string;
@@ -15,7 +15,7 @@ export interface Store {
 
 const storeData: Record<string, Store[]> = {
   hema: hemaStores as Store[],
-  kruidvat: kruidvatStores as Store[],
+  etos: etosStores as Store[],
 };
 
 export function loadStores(tenantId: string): Store[] {

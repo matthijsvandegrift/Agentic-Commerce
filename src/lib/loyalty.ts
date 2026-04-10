@@ -1,5 +1,5 @@
 import hemaLoyalty from "@/data/hema/loyalty.json";
-import kruidvatLoyalty from "@/data/kruidvat/loyalty.json";
+import etosLoyalty from "@/data/kruidvat/loyalty.json";
 
 export interface LoyaltyProfile {
   programName: string;
@@ -25,7 +25,7 @@ export interface LoyaltyProfile {
 
 const loyaltyData: Record<string, LoyaltyProfile> = {
   hema: hemaLoyalty as LoyaltyProfile,
-  kruidvat: kruidvatLoyalty as LoyaltyProfile,
+  etos: etosLoyalty as LoyaltyProfile,
 };
 
 export function getLoyaltyProfile(

@@ -1,5 +1,5 @@
 import hemaPromotions from "@/data/hema/promotions.json";
-import kruidvatPromotions from "@/data/kruidvat/promotions.json";
+import etosPromotions from "@/data/kruidvat/promotions.json";
 
 interface DiscountCode {
   code: string;
@@ -28,7 +28,7 @@ interface PromotionData {
 
 const promoData: Record<string, PromotionData> = {
   hema: hemaPromotions as PromotionData,
-  kruidvat: kruidvatPromotions as PromotionData,
+  etos: etosPromotions as PromotionData,
 };
 
 export function getActivePromotions(tenantId: string) {

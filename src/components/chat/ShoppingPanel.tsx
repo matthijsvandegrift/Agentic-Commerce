@@ -3,19 +3,29 @@
 import { useState, useEffect } from "react";
 import { CartItem } from "@/types";
 
+interface SuggestedProduct {
+  id: string;
+  name: string;
+  price: number;
+  imageUrl?: string;
+}
+
 interface ShoppingPanelProps {
   cart: CartItem[];
+  suggestedProducts?: SuggestedProduct[];
   onAddSuggested: (productId: string) => void;
   onCheckout: () => void;
 }
 
-// Suggested products with discounts
-const suggestions = [
-  { id: "hema-007", name: "Geurkaars Vanille", price: 5.0, discount: 20, image: "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwcaf73d68/product/9650172_01_001.jpg?sw=200&sh=200&sm=fit" },
-  { id: "hema-030", name: "Koekjes Chocolade", price: 5.5, discount: 15, image: "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwe5cf09ba/product/9650400_01_001.jpg?sw=200&sh=200&sm=fit" },
-  { id: "hema-017", name: "Drinkfles 500ml", price: 5.0, discount: 25, image: "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw41f5b788/product/9423101_01_001.jpg?sw=200&sh=200&sm=fit" },
-  { id: "hema-010", name: "Fotokader 13x18", price: 5.5, discount: 10, image: "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwdb51a138/product/80190033_01_001.jpg?sw=200&sh=200&sm=fit" },
-];
+// Suggested product IDs with discounts (images come from catalog)
+const suggestionMeta: Record<string, number> = {
+  "hema-007": 20,
+  "hema-030": 15,
+  "hema-017": 25,
+  "hema-010": 10,
+  "hema-001": 0,
+  "hema-026": 30,
+};
 
 function CountdownTimer() {
   const [time, setTime] = useState({ h: 2, m: 47, s: 13 });
@@ -47,10 +57,13 @@ function CountdownTimer() {
   );
 }
 
-export function ShoppingPanel({ cart, onAddSuggested, onCheckout }: ShoppingPanelProps) {
+export function ShoppingPanel({ cart, suggestedProducts, onAddSuggested, onCheckout }: ShoppingPanelProps) {
   const total = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const cartProductIds = new Set(cart.map((i) => i.product.id));
-  const filteredSuggestions = suggestions.filter((s) => !cartProductIds.has(s.id));
+
+  const filteredSuggestions = (suggestedProducts || [])
+    .filter((s) => !cartProductIds.has(s.id) && s.id in suggestionMeta)
+    .map((s) => ({ ...s, discount: suggestionMeta[s.id] || 10 }));
 
   return (
     <div className="flex flex-col h-full bg-gray-50 border-l border-gray-200">
@@ -142,7 +155,13 @@ export function ShoppingPanel({ cart, onAddSuggested, onCheckout }: ShoppingPane
                 const discountedPrice = item.price * (1 - item.discount / 100);
                 return (
                   <div key={item.id} className="flex items-center gap-2.5 bg-white/60 rounded-lg p-2 border border-dashed border-gray-200">
-                    <img src={item.image} alt={item.name} className="w-10 h-10 rounded object-cover opacity-80" />
+                    {item.imageUrl ? (
+                      <img src={item.imageUrl} alt={item.name} className="w-10 h-10 rounded object-cover opacity-80" />
+                    ) : (
+                      <div className="w-10 h-10 rounded bg-gray-100 flex items-center justify-center text-[10px] font-bold text-gray-400">
+                        {item.name.slice(0, 2).toUpperCase()}
+                      </div>
+                    )}
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-gray-500 truncate">{item.name}</p>
                       <div className="flex items-center gap-1.5">

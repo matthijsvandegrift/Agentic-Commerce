@@ -1,332 +1,490 @@
 [
   {
-    "id": "kv-001",
-    "name": "L'Oréal Revitalift Dagcrème Anti-Rimpel",
-    "description": "Anti-rimpel dagcrème met Pro-Retinol en Fibrelastyl. Vermindert rimpels zichtbaar in 4 weken.",
-    "price": 14.99,
-    "category": "Gezichtsverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "50ml", "huidtype": "alle huidtypes", "leeftijd": "35+" },
-    "tags": ["dagcrème", "anti-rimpel", "loreal", "gezicht", "verzorging"],
-    "inStock": true
-  },
-  {
-    "id": "kv-002",
-    "name": "Kruidvat Paracetamol 500mg 50 tabletten",
-    "description": "Pijnstillend en koortsverlagend. Bij hoofdpijn, kiespijn, spierpijn en griep.",
-    "price": 1.29,
-    "category": "Gezondheid",
-    "imageUrl": "",
-    "attributes": { "dosering": "500mg", "aantal": "50 tabletten" },
-    "tags": ["paracetamol", "pijnstiller", "hoofdpijn", "koorts", "griep"],
-    "inStock": true
-  },
-  {
-    "id": "kv-003",
-    "name": "Oral-B Pro 3 Elektrische Tandenborstel",
-    "description": "Elektrische tandenborstel met 3D-reiniging en druksensor. Inclusief reisetui en 2 opzetborstels.",
-    "price": 49.99,
-    "category": "Mondverzorging",
-    "imageUrl": "",
-    "attributes": { "batterijduur": "2 weken", "opzetborstels": "2" },
-    "tags": ["tandenborstel", "elektrisch", "oral-b", "mondverzorging", "cadeau"],
-    "inStock": true
-  },
-  {
-    "id": "kv-004",
-    "name": "Pampers Premium Protection Maat 3",
-    "description": "Pampers zachtste comfort en bescherming. Maat 3 voor baby's van 6-10 kg. 42 luiers per pak.",
-    "price": 12.99,
-    "category": "Baby",
-    "imageUrl": "",
-    "attributes": { "maat": "3", "gewicht": "6-10 kg", "aantal": "42 stuks" },
-    "tags": ["pampers", "luiers", "baby", "bescherming"],
-    "inStock": true
-  },
-  {
-    "id": "kv-005",
-    "name": "Garnier Micellair Reinigingswater",
-    "description": "All-in-1 reinigingswater dat make-up, vuil en overtollig talg verwijdert. Voor de gevoelige huid.",
-    "price": 5.99,
-    "category": "Gezichtsverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "400ml", "huidtype": "gevoelige huid" },
-    "tags": ["micellair", "reinigingswater", "garnier", "make-up remover", "gezicht"],
-    "inStock": true
-  },
-  {
-    "id": "kv-006",
-    "name": "Nivea Sun Protect & Hydrate SPF30",
-    "description": "Hydraterende zonnebrandcrème met SPF30. Directe bescherming tegen UVA/UVB straling.",
-    "price": 9.99,
-    "category": "Zonbescherming",
-    "imageUrl": "",
-    "attributes": { "inhoud": "200ml", "spf": "30" },
-    "tags": ["zonnebrand", "spf", "nivea", "zon", "zomer", "bescherming"],
-    "inStock": true
-  },
-  {
-    "id": "kv-007",
-    "name": "Schwarzkopf Gliss Kur Total Repair Shampoo",
-    "description": "Herstellende shampoo voor droog en beschadigd haar. Met keratine complex voor sterker haar.",
-    "price": 4.49,
-    "category": "Haarverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "250ml", "haartype": "droog/beschadigd" },
-    "tags": ["shampoo", "schwarzkopf", "haar", "repair", "keratine"],
-    "inStock": true
-  },
-  {
-    "id": "kv-008",
-    "name": "Rimmel London Scandaleyes Mascara",
-    "description": "Volume mascara voor dramatische wimpers. Tot 12 uur langhoudend. Klontvrije formule.",
-    "price": 8.99,
-    "category": "Make-up",
-    "imageUrl": "",
-    "attributes": { "kleur": "zwart", "houdbaarheid": "12 uur" },
-    "tags": ["mascara", "rimmel", "make-up", "wimpers", "ogen"],
-    "inStock": true
-  },
-  {
-    "id": "kv-009",
-    "name": "Kruidvat Vitamine D3 25mcg",
-    "description": "Vitamine D3 voor sterke botten en een goede weerstand. 365 tabletten voor een heel jaar.",
-    "price": 5.99,
-    "category": "Gezondheid",
-    "imageUrl": "",
-    "attributes": { "dosering": "25mcg", "aantal": "365 tabletten" },
-    "tags": ["vitamine", "vitamine-d", "weerstand", "botten", "supplement"],
-    "inStock": true
-  },
-  {
-    "id": "kv-010",
-    "name": "Dove Douchegel Deeply Nourishing",
-    "description": "Voedende douchegel met NutriumMoisture technologie. Voor zijdezachte huid na het douchen.",
-    "price": 3.49,
-    "category": "Lichaamsverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "250ml" },
-    "tags": ["douchegel", "dove", "douche", "verzorging", "huid"],
-    "inStock": true
-  },
-  {
-    "id": "kv-011",
-    "name": "Kruidvat Multivitaminen Compleet",
-    "description": "Complete multivitamine met 22 vitamines en mineralen. 90 tabletten voor 3 maanden.",
-    "price": 4.99,
-    "category": "Gezondheid",
-    "imageUrl": "",
-    "attributes": { "aantal": "90 tabletten", "kuur": "3 maanden" },
-    "tags": ["multivitamine", "vitamines", "mineralen", "gezondheid", "supplement"],
-    "inStock": true
-  },
-  {
-    "id": "kv-012",
-    "name": "L'Oréal Paris Elvive Color Vive Shampoo",
-    "description": "Beschermende shampoo speciaal voor gekleurd haar. Houdt de kleur langer mooi en glanzend.",
-    "price": 4.99,
-    "category": "Haarverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "250ml", "haartype": "gekleurd haar" },
-    "tags": ["shampoo", "loreal", "gekleurd haar", "kleur", "bescherming"],
-    "inStock": true
-  },
-  {
-    "id": "kv-013",
-    "name": "Maybelline Fit Me Matte Foundation",
-    "description": "Matterende foundation die poriën verfijnt. Licht dekkend tot dekkend. Verkrijgbaar in 40 tinten.",
-    "price": 11.99,
-    "category": "Make-up",
-    "imageUrl": "",
-    "attributes": { "inhoud": "30ml", "finish": "mat" },
-    "tags": ["foundation", "maybelline", "make-up", "gezicht", "dekking"],
-    "inStock": true
-  },
-  {
-    "id": "kv-014",
-    "name": "Gillette Venus Smooth Scheermesjes 4 stuks",
-    "description": "Scheermesjes met 3 blades en moisturestrip. Voor een gladde scheerbeurt en zachte huid.",
-    "price": 12.99,
-    "category": "Lichaamsverzorging",
-    "imageUrl": "",
-    "attributes": { "aantal": "4 mesjes" },
-    "tags": ["scheermesjes", "scheren", "gillette", "venus", "dames"],
-    "inStock": true
-  },
-  {
-    "id": "kv-015",
-    "name": "Kruidvat Ibuprofen 400mg 20 tabletten",
-    "description": "Ontstekingsremmend en pijnstillend. Bij hoofdpijn, tandpijn en menstruatiepijn.",
-    "price": 1.99,
-    "category": "Gezondheid",
-    "imageUrl": "",
-    "attributes": { "dosering": "400mg", "aantal": "20 tabletten" },
-    "tags": ["ibuprofen", "pijnstiller", "ontstekingsremmer", "hoofdpijn"],
-    "inStock": true
-  },
-  {
-    "id": "kv-016",
-    "name": "Neutral Baby Waslotion",
-    "description": "Milde waslotion speciaal voor de gevoelige babyhuid. Parfumvrij en dermatologisch getest.",
-    "price": 3.99,
-    "category": "Baby",
-    "imageUrl": "",
-    "attributes": { "inhoud": "250ml", "parfumvrij": "ja" },
-    "tags": ["baby", "waslotion", "mild", "gevoelig", "huidverzorging"],
-    "inStock": true
-  },
-  {
-    "id": "kv-017",
-    "name": "Kruidvat Wattenstaafjes 300 stuks",
-    "description": "Zachte wattenstaafjes met papieren stokje. Voor dagelijkse verzorging.",
-    "price": 0.99,
-    "category": "Verzorging",
-    "imageUrl": "",
-    "attributes": { "aantal": "300 stuks", "materiaal": "papieren stokje" },
-    "tags": ["wattenstaafjes", "wattenstokjes", "verzorging", "basis"],
-    "inStock": true
-  },
-  {
-    "id": "kv-018",
-    "name": "Dettol Allesreiniger Power & Fresh Citroen",
-    "description": "Antibacteriële allesreiniger met frisse citroengeur. Verwijdert 99,9% van de bacteriën.",
-    "price": 3.29,
-    "category": "Huishouden",
-    "imageUrl": "",
-    "attributes": { "inhoud": "500ml", "geur": "citroen" },
-    "tags": ["allesreiniger", "schoonmaken", "dettol", "antibacterieel", "huishouden"],
-    "inStock": true
-  },
-  {
-    "id": "kv-019",
-    "name": "Kruidvat Handcrème Intensief Herstellend",
-    "description": "Intensief herstellende handcrème voor droge en ruwe handen. Trekt snel in.",
-    "price": 2.49,
-    "category": "Lichaamsverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "100ml" },
-    "tags": ["handcrème", "handen", "droge huid", "verzorging", "crème"],
-    "inStock": true
-  },
-  {
-    "id": "kv-020",
-    "name": "Rexona Deodorant Cotton Dry Roller",
-    "description": "48-uurs bescherming tegen zweet en lichaamsgeur. Met motionSense technologie.",
-    "price": 3.99,
-    "category": "Lichaamsverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "50ml", "type": "roller" },
-    "tags": ["deodorant", "deo", "rexona", "anti-transpirant", "roller"],
-    "inStock": true
-  },
-  {
-    "id": "kv-021",
-    "name": "NYX Professional Makeup Lip Liner",
-    "description": "Romige lip liner voor een perfecte lipcontour. Langdurige formule die niet uitloopt.",
-    "price": 5.49,
-    "category": "Make-up",
-    "imageUrl": "",
-    "attributes": { "kleur": "natural", "type": "retractable" },
-    "tags": ["lip liner", "nyx", "make-up", "lippen"],
-    "inStock": true
-  },
-  {
-    "id": "kv-022",
-    "name": "Zwitsal Luieruitslag Crème",
-    "description": "Beschermende crème tegen luieruitslag. Met zinkoxide en kamille. Dermatologisch getest.",
-    "price": 4.49,
-    "category": "Baby",
-    "imageUrl": "",
-    "attributes": { "inhoud": "100ml" },
-    "tags": ["luieruitslag", "baby", "zwitsal", "crème", "bescherming"],
-    "inStock": true
-  },
-  {
-    "id": "kv-023",
-    "name": "Kruidvat Daglenzen -2.00 30 stuks",
-    "description": "Comfortabele daglenzen met UV-bescherming. Hoog zuurstof doorlatend voor gezonde ogen.",
-    "price": 12.99,
-    "category": "Gezondheid",
-    "imageUrl": "",
-    "attributes": { "sterkte": "-2.00", "aantal": "30 stuks", "type": "daglenzen" },
-    "tags": ["contactlenzen", "daglenzen", "ogen", "zicht"],
-    "inStock": true
-  },
-  {
-    "id": "kv-024",
-    "name": "Sensodyne Tandpasta Repair & Protect",
-    "description": "Tandpasta voor gevoelige tanden. Herstelt en beschermt kwetsbare plekken op het tandglazuur.",
-    "price": 6.99,
-    "category": "Mondverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "75ml" },
-    "tags": ["tandpasta", "gevoelige tanden", "sensodyne", "glazuur"],
-    "inStock": true
-  },
-  {
-    "id": "kv-025",
-    "name": "Bioderma Sensibio H2O Micellair Water",
-    "description": "Het originele micellair water voor de gevoelige huid. Reinigt en kalmeert in één stap.",
-    "price": 14.99,
-    "category": "Gezichtsverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "500ml", "huidtype": "gevoelig" },
-    "tags": ["micellair", "bioderma", "reinigen", "gevoelige huid", "gezicht"],
-    "inStock": true
-  },
-  {
-    "id": "kv-026",
-    "name": "Kruidvat Tissues Sensitive 100 stuks",
-    "description": "Extra zachte tissues voor de gevoelige huid. Zonder parfum en kleurstoffen.",
-    "price": 1.49,
-    "category": "Verzorging",
-    "imageUrl": "",
-    "attributes": { "aantal": "100 stuks", "parfumvrij": "ja" },
-    "tags": ["tissues", "zakdoekjes", "gevoelig", "neus", "verkoudheid"],
-    "inStock": true
-  },
-  {
-    "id": "kv-027",
-    "name": "Kruidvat Zonnecrème Kids SPF50",
-    "description": "Extra hoge bescherming voor de kinderhuid. Waterbestendig en makkelijk smeerbaar.",
+    "name": "Etos Dagcrème Hydra",
+    "description": "Hydraterende dagcrème met hyaluronzuur. Geschikt voor alle huidtypes.",
     "price": 7.99,
-    "category": "Zonbescherming",
-    "imageUrl": "",
-    "attributes": { "inhoud": "200ml", "spf": "50", "waterbestendig": "ja" },
-    "tags": ["zonnebrand", "kinderen", "spf50", "zon", "zomer"],
-    "inStock": true
-  },
-  {
-    "id": "kv-028",
-    "name": "Elvive Dream Length Haarmasker",
-    "description": "Herstellend haarmasker voor lang, beschadigd haar. Met castorolie en keratine.",
-    "price": 7.99,
-    "category": "Haarverzorging",
-    "imageUrl": "",
-    "attributes": { "inhoud": "300ml" },
-    "tags": ["haarmasker", "loreal", "lang haar", "herstel", "keratine"],
-    "inStock": true
-  },
-  {
-    "id": "kv-029",
-    "name": "Kruidvat Nagellak Remover Aceton-vrij",
-    "description": "Milde nagellak remover zonder aceton. Verrijkt met vitamine E voor verzorgde nagels.",
-    "price": 1.99,
     "category": "Beauty",
-    "imageUrl": "",
-    "attributes": { "inhoud": "125ml", "acetonvrij": "ja" },
-    "tags": ["nagellak remover", "nagels", "beauty", "verzorging"],
-    "inStock": true
+    "tags": [
+      "dagcrème",
+      "beauty",
+      "huid",
+      "verzorging"
+    ],
+    "id": "etos-001",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw6d778ccc/images/120902201/120902201_aba61931-1fab-4d80-8edf-a2ff7ebfdac0.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 5
   },
   {
-    "id": "kv-030",
-    "name": "Robijn Wasverzachter Morgenfris",
-    "description": "Wasverzachter voor heerlijk zacht en fris ruikend wasgoed. Langdurige frisheid.",
+    "name": "Etos Shampoo Repair & Care",
+    "description": "Herstellende shampoo voor beschadigd haar. Met keratine en arganolie.",
+    "price": 3.49,
+    "category": "Verzorging",
+    "tags": [
+      "shampoo",
+      "haar",
+      "verzorging"
+    ],
+    "id": "etos-002",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw8bc547c3/images/120903731/120903731_c4d254ce-995e-4e89-890a-6d01ddd8e6ce.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 8
+  },
+  {
+    "name": "Etos Tandpasta Fresh Mint",
+    "description": "Tandpasta met fluoride voor frisse adem en sterke tanden.",
+    "price": 1.99,
+    "category": "Verzorging",
+    "tags": [
+      "tandpasta",
+      "tanden",
+      "mondverzorging"
+    ],
+    "id": "etos-003",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwdb41ba72/images/120904531/120904531_c08820d3-c9b1-445c-ad5f-4ed4fff54fc8.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 11
+  },
+  {
+    "name": "Etos Luiers Maat 4 Maxi",
+    "description": "Comfortabele en absorberende luiers. Voordeelverpakking 46 stuks.",
+    "price": 8.99,
+    "category": "Baby",
+    "tags": [
+      "luiers",
+      "baby",
+      "kind"
+    ],
+    "id": "etos-004",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwf30cc140/images/120903757/120903757_87269c50-f290-401c-9a9b-d723b4d76655.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 14
+  },
+  {
+    "name": "Etos Vitamine D3 75mcg",
+    "description": "Vitamine D3 tabletten voor sterke botten en weerstand. 120 stuks.",
+    "price": 9.99,
+    "category": "Gezondheid",
+    "tags": [
+      "vitamines",
+      "gezondheid",
+      "supplementen"
+    ],
+    "id": "etos-005",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw824dc586/images/120904901/120904901_f737de5c-7ff0-4490-abf6-5870a295379e.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 17
+  },
+  {
+    "name": "Etos Bodylotion Shea Butter",
+    "description": "Voedende bodylotion met sheaboter. Voor een zijdezachte huid.",
+    "price": 4.49,
+    "category": "Verzorging",
+    "tags": [
+      "bodylotion",
+      "huid",
+      "verzorging",
+      "sheaboter"
+    ],
+    "id": "etos-006",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw05e83cb1/images/120751597/120751597_MCM_PACK_1315177.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 20
+  },
+  {
+    "name": "Etos Gezichtsmasker Charcoal",
+    "description": "Zuiverend kleimasker met actieve kool. Reinigt de poriën diep.",
+    "price": 2.99,
+    "category": "Beauty",
+    "tags": [
+      "gezichtsmasker",
+      "beauty",
+      "huid",
+      "charcoal"
+    ],
+    "id": "etos-007",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwb28ed846/images/120904514/120904514_c0a93746-cd11-4a5f-bed5-8664578369dd.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 23
+  },
+  {
+    "name": "Etos Multivitaminen A-Z",
+    "description": "Complete multivitamine met 24 vitamines en mineralen. 90 tabletten.",
+    "price": 7.49,
+    "category": "Gezondheid",
+    "tags": [
+      "vitamines",
+      "multivitamine",
+      "gezondheid"
+    ],
+    "id": "etos-008",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwb1b57758/images/120904493/120904493_e3f12434-8bac-464e-a267-565ce755812b.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 26
+  },
+  {
+    "name": "Etos Handzeep Aloe Vera",
+    "description": "Milde handzeep met aloë vera. Reinigt en hydrateert tegelijk.",
+    "price": 1.79,
+    "category": "Verzorging",
+    "tags": [
+      "handzeep",
+      "verzorging",
+      "aloe vera"
+    ],
+    "id": "etos-009",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw43d52e5e/images/120903546/120903546_5122de2b-1bb8-4944-b054-01ef65aeb7f0.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 29
+  },
+  {
+    "name": "Etos Douchegel Tropical",
+    "description": "Fruitig geurende douchegel met mango en passievrucht extract.",
+    "price": 2.49,
+    "category": "Verzorging",
+    "tags": [
+      "douchegel",
+      "douche",
+      "verzorging"
+    ],
+    "id": "etos-010",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwe6b665d6/images/120902244/120902244_8d855e93-3e16-4849-a153-02ae833cad1b.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 32
+  },
+  {
+    "name": "Etos Zonnebrand SPF30",
+    "description": "Waterbestendige zonnebrandcrème met SPF30. Beschermt tegen UVA/UVB.",
+    "price": 8.99,
+    "category": "Beauty",
+    "tags": [
+      "zonnebrand",
+      "spf",
+      "zomer",
+      "huid"
+    ],
+    "id": "etos-011",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwc7f18b41/images/120904477/120904477_df88506d-18f2-46bc-9e64-3548353aada5.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 35
+  },
+  {
+    "name": "Etos Nachtcrème Anti-Age",
+    "description": "Anti-aging nachtcrème met retinol en vitamine E.",
+    "price": 9.99,
+    "category": "Beauty",
+    "tags": [
+      "nachtcrème",
+      "anti-age",
+      "beauty"
+    ],
+    "id": "etos-012",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw50eb2bbe/images/120904522/120904522_cdf78ef0-4ee0-4666-9428-34f649963471.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 38
+  },
+  {
+    "name": "Etos Conditioner Repair",
+    "description": "Herstellende conditioner voor droog en beschadigd haar.",
+    "price": 3.49,
+    "category": "Verzorging",
+    "tags": [
+      "conditioner",
+      "haar",
+      "verzorging"
+    ],
+    "id": "etos-013",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwab1ea587/images/120903538/120903538_4f27b1f3-2783-4d67-a4e1-4984ad4538f9.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 41
+  },
+  {
+    "name": "Etos Deodorant Fresh",
+    "description": "48-uurs bescherming deodorant. Fris en verzorgend.",
+    "price": 2.99,
+    "category": "Verzorging",
+    "tags": [
+      "deodorant",
+      "fris",
+      "verzorging"
+    ],
+    "id": "etos-014",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw40e6e983/images/120909403/120909403_39ad3682-8b12-411c-bdd8-7f0b1e2378cb.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 44
+  },
+  {
+    "name": "Etos Wasmiddel Fris",
+    "description": "Vloeibaar wasmiddel voor witte was. 30 wasbeurten.",
     "price": 4.99,
     "category": "Huishouden",
-    "imageUrl": "",
-    "attributes": { "inhoud": "750ml", "wasbeurten": "30" },
-    "tags": ["wasverzachter", "robijn", "wassen", "huishouden", "fris"],
-    "inStock": true
+    "tags": [
+      "wasmiddel",
+      "huishouden",
+      "schoonmaken"
+    ],
+    "id": "etos-015",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw2ecf4132/images/120899233/120899233_f46ca9fd-a9ad-4d45-9644-6d38eb7f7855.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 7
+  },
+  {
+    "name": "Etos Luiercrème Zink",
+    "description": "Beschermende luiercrème met zinkoxide. Voorkomt luieruitslag.",
+    "price": 3.99,
+    "category": "Baby",
+    "tags": [
+      "luiercrème",
+      "baby",
+      "verzorging"
+    ],
+    "id": "etos-016",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwc480ad4e/images/120904274/120904274_77a71bd8-4fe5-40e6-8027-7fc5a6af8239.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 10
+  },
+  {
+    "name": "Etos Paracetamol 500mg",
+    "description": "Pijnstiller en koortsremmer. Verpakking van 20 tabletten.",
+    "price": 1.49,
+    "category": "Gezondheid",
+    "tags": [
+      "paracetamol",
+      "pijnstiller",
+      "gezondheid"
+    ],
+    "id": "etos-017",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw3e2f3533/images/120909147/120909147_e8298986-eab1-483f-a047-6b428822d139.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 13
+  },
+  {
+    "name": "Etos Make-up Remover",
+    "description": "Milde make-up remover doekjes. 25 stuks per verpakking.",
+    "price": 2.49,
+    "category": "Beauty",
+    "tags": [
+      "make-up",
+      "remover",
+      "beauty",
+      "reiniging"
+    ],
+    "id": "etos-018",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwc56bf6b3/images/120909219/120909219_f7cb49d3-c688-4740-9413-f4150e4a007d.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 16
+  },
+  {
+    "name": "Etos Waspoeder Color",
+    "description": "Waspoeder voor gekleurde was. Behoudt de kleuren. 18 wasbeurten.",
+    "price": 3.99,
+    "category": "Huishouden",
+    "tags": [
+      "waspoeder",
+      "huishouden",
+      "was"
+    ],
+    "id": "etos-019",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwbd4f9296/images/120895321/120895321_14d2154d-7e07-486f-85cf-e5fd83990afa.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 19
+  },
+  {
+    "name": "Etos Handcrème Intensief",
+    "description": "Intensief hydraterende handcrème. Trekt snel in.",
+    "price": 3.49,
+    "category": "Verzorging",
+    "tags": [
+      "handcrème",
+      "handen",
+      "verzorging"
+    ],
+    "id": "etos-020",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwf9f4fafc/images/120117828/120117828_MCM_PACK_1375778.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 22
+  },
+  {
+    "name": "Etos Billendoekjes Baby",
+    "description": "Extra zachte billendoekjes met kamille. 72 stuks.",
+    "price": 1.99,
+    "category": "Baby",
+    "tags": [
+      "billendoekjes",
+      "baby",
+      "verzorging"
+    ],
+    "id": "etos-021",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw896577e5/images/112038054/112038054_69c0e651-0d65-4484-90d6-0b6f7687b505.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 25
+  },
+  {
+    "name": "Etos Scheergel Sensitive",
+    "description": "Scheergel voor de gevoelige huid. Met aloë vera en vitamine E.",
+    "price": 3.99,
+    "category": "Verzorging",
+    "tags": [
+      "scheergel",
+      "scheren",
+      "verzorging"
+    ],
+    "id": "etos-022",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw029aa098/images/120178971/120178971_ee828716-41ba-425e-beb1-8065ee05f410.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 28
+  },
+  {
+    "name": "Etos Lippenbalsem SPF15",
+    "description": "Verzorgende lippenbalsem met SPF15 bescherming.",
+    "price": 2.49,
+    "category": "Beauty",
+    "tags": [
+      "lippenbalsem",
+      "lippen",
+      "beauty",
+      "spf"
+    ],
+    "id": "etos-023",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwd3f35b98/images/120391288/120391288_MCM_PACK_1299286.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 31
+  },
+  {
+    "name": "Etos Wondpleisters Mix",
+    "description": "Assortiment pleisters in verschillende maten. 30 stuks.",
+    "price": 2.99,
+    "category": "Gezondheid",
+    "tags": [
+      "pleisters",
+      "EHBO",
+      "gezondheid"
+    ],
+    "id": "etos-024",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw80089f2e/images/120513388/120513388_MCM_PACK_1369384.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 34
+  },
+  {
+    "name": "Etos Haargel Strong Hold",
+    "description": "Haargel met sterke hold. Zonder plakken of vlokken.",
+    "price": 2.99,
+    "category": "Verzorging",
+    "tags": [
+      "haargel",
+      "haar",
+      "styling"
+    ],
+    "id": "etos-025",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwd1db1a07/images/120895241/120895241_2b0db88d-0415-4496-a00c-9776efad5bf3.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 37
+  },
+  {
+    "name": "Etos Oogdruppels Hydra",
+    "description": "Hydraterende oogdruppels voor droge en vermoeide ogen.",
+    "price": 6.99,
+    "category": "Gezondheid",
+    "tags": [
+      "oogdruppels",
+      "ogen",
+      "gezondheid"
+    ],
+    "id": "etos-026",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwcaa10bd5/images/120165678/120165678_MCM_PACK_1361075.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 40
+  },
+  {
+    "name": "Etos Nagellak Ruby Red",
+    "description": "Langhoudende nagellak in klassiek rood. Tot 7 dagen glans.",
+    "price": 3.99,
+    "category": "Beauty",
+    "tags": [
+      "nagellak",
+      "nagels",
+      "beauty",
+      "rood"
+    ],
+    "id": "etos-027",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw0eaa6df1/images/112098997/112098997_88385366-f857-4078-b7ac-913c41ae76ce.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 43
+  },
+  {
+    "name": "Etos Vaatwasmiddel Citroen",
+    "description": "Afwasmiddel met citroengeur. Extra vetoplossend.",
+    "price": 1.49,
+    "category": "Huishouden",
+    "tags": [
+      "afwasmiddel",
+      "huishouden",
+      "schoonmaken"
+    ],
+    "id": "etos-028",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw656b4ddc/images/120625187/120625187_1459a6be-3067-4ff8-9369-5e6f271f572f.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 6
+  },
+  {
+    "name": "Etos Neusspray Zoutwater",
+    "description": "Natuurlijke neusspray met zeewater. Verzacht bij verkoudheid.",
+    "price": 4.99,
+    "category": "Gezondheid",
+    "tags": [
+      "neusspray",
+      "verkoudheid",
+      "gezondheid"
+    ],
+    "id": "etos-029",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dwf6a0e03f/images/111249829/111249829_b8fa8d65-2d1e-4e49-b1e0-ed4ef60fcec3.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 9
+  },
+  {
+    "name": "Etos Badschuim Lavendel",
+    "description": "Ontspannend badschuim met lavendelolie. Voor een heerlijk bad.",
+    "price": 3.49,
+    "category": "Verzorging",
+    "tags": [
+      "badschuim",
+      "bad",
+      "lavendel",
+      "ontspanning"
+    ],
+    "id": "etos-030",
+    "imageUrl": "https://www.etos.nl/dw/image/v2/BCTN_PRD/on/demandware.static/-/Sites-etos-master-catalog/default/dw86a6250f/images/111070394/111070394_MCM_PACK_1343870.png?sw=400&sfrm=png&bgcolor=FFFFFF",
+    "attributes": {},
+    "inStock": true,
+    "stockLevel": 12
   }
 ]

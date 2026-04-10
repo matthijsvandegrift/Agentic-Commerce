@@ -5,7 +5,7 @@ import { demoScenarios } from "@/config/demo-scenarios";
 
 const TENANTS = [
   { id: "hema", name: "HEMA" },
-  { id: "kruidvat", name: "Kruidvat" },
+  { id: "etos", name: "Etos" },
 ];
 
 interface DemoSwitcherProps {

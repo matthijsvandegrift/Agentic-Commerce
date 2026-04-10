@@ -5,7 +5,7 @@
     "description": "De iconische HEMA tompouce met romige banketbakkersroom en roze fondant. Een klassieker die je niet mag missen.",
     "price": 2.0,
     "category": "Eten & Drinken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw46baa38a/product/9650142_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw46baa38a/product/9650142_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "gewicht": "100g",
       "allergenen": "gluten, melk, ei"
@@ -26,7 +26,7 @@
     "description": "De beroemde HEMA rookworst. Stevig gekruid, heerlijk gerookt. Perfect voor bij de stamppot of gewoon op brood.",
     "price": 3.5,
     "category": "Eten & Drinken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw17725f48/product/9650144_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw17725f48/product/9650144_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "gewicht": "275g",
       "allergenen": "bevat varkensvlees"
@@ -46,7 +46,7 @@
     "description": "Zacht katoenen T-shirt met ronde hals. Verkrijgbaar in meerdere kleuren. De perfecte basic.",
     "price": 6.0,
     "category": "Kleding",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwaf0e9ae3/product/80890030_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw78befc6e/product/9650134_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "materiaal": "100% katoen",
       "maten": "S-XXL",
@@ -67,7 +67,7 @@
     "description": "Comfortabel dames T-shirt van zacht katoen. Ideaal als basis voor elke outfit.",
     "price": 6.0,
     "category": "Kleding",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw906ee543/product/80630397_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwcaf73d68/product/9650172_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "materiaal": "100% katoen",
       "maten": "XS-XL",
@@ -88,7 +88,7 @@
     "description": "Ruime sporttas met apart schoenenvak. Stevig en lichtgewicht — perfect voor school of sport.",
     "price": 15.0,
     "category": "Tassen & Accessoires",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw662f6c5c/product/80840022_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw837e43bb/product/80120003_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "afmetingen": "50x25x25cm",
       "materiaal": "polyester"
@@ -108,7 +108,7 @@
     "description": "Dikke, zachte handdoek van 100% katoen. Goed absorberend en verkrijgbaar in vrolijke HEMA-kleuren.",
     "price": 9.0,
     "category": "Wonen",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwfd8b2907/product/9650130_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwaf0e9ae3/product/80890030_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "afmetingen": "70x140cm",
       "materiaal": "100% katoen",
@@ -128,7 +128,7 @@
     "description": "Geurkaars met warme vanillegeur. Creëert direct een gezellige sfeer in huis. Brandduur circa 40 uur.",
     "price": 5.0,
     "category": "Wonen",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwcaf73d68/product/9650172_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw906ee543/product/80630397_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "brandduur": "40 uur",
       "geur": "vanille"
@@ -149,7 +149,7 @@
     "description": "Gevuld etui met pennen, potloden, gum, liniaal en schaar. Alles wat je nodig hebt voor school.",
     "price": 8.5,
     "category": "Kantoor & School",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw42f19d14/product/80190031_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw662f6c5c/product/80840022_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "inhoud": "12-delig"
     },
@@ -168,7 +168,7 @@
     "description": "Handig A5 notitieboek met 80 gelinieerde pagina's en stevige kaft. Perfect voor school of werk.",
     "price": 3.0,
     "category": "Kantoor & School",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw1c652a2b/product/80190032_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwfd8b2907/product/9650130_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "formaat": "A5",
       "paginas": "80",
@@ -189,7 +189,7 @@
     "description": "Stijlvol houten fotokader voor je mooiste herinneringen. Past in elk interieur.",
     "price": 5.5,
     "category": "Wonen",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwdb51a138/product/80190033_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwdce5f893/product/9650133_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "formaat": "13x18cm",
       "materiaal": "hout",
@@ -210,7 +210,7 @@
     "description": "Handige kartonnen koffiebekers voor onderweg. Dubbelwandig voor warmte-isolatie.",
     "price": 3.5,
     "category": "Keuken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw92f67b30/product/9423100_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwf7a618a0/product/9650131_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "inhoud": "250ml",
       "aantal": "8 stuks"
@@ -229,7 +229,7 @@
     "description": "Klassieke chocoladeletter van melkchocolade. Verkrijgbaar in alle letters van het alfabet.",
     "price": 3.5,
     "category": "Eten & Drinken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw78befc6e/product/9650134_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw1462183b/product/9650143_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "gewicht": "135g",
       "type": "melkchocolade"
@@ -249,7 +249,7 @@
     "description": "Comfortabele boxershorts van stretchkatoen. Set van 3 in klassieke kleuren.",
     "price": 15.0,
     "category": "Kleding",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw837e43bb/product/80120003_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwaf780e70/product/80120004_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "materiaal": "95% katoen, 5% elastaan",
       "maten": "S-XXL"
@@ -269,7 +269,7 @@
     "description": "Stevig hoofdkussen voor een goede nachtrust. Geschikt voor rug- en zijslapers.",
     "price": 12.0,
     "category": "Wonen",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwdce5f893/product/9650133_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwfeb32b88/product/9423105_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "afmetingen": "60x70cm",
       "vulling": "polyester",
@@ -289,7 +289,7 @@
     "description": "Handige digitale kookwekker met magneet. Telt af tot 99 minuten. Klein en handig in de keuken.",
     "price": 4.5,
     "category": "Keuken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwfeb32b88/product/9423105_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw4efcd2c9/product/9423103_01_101.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "type": "digitaal",
       "batterij": "AAA (inbegrepen)"
@@ -308,7 +308,7 @@
     "description": "Stevige broodtrommel met handige vakjes voor fruit en snacks. Ideaal voor school of werk.",
     "price": 6.0,
     "category": "Keuken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw4efcd2c9/product/9423103_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw92f67b30/product/9423100_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "materiaal": "kunststof",
       "vaatwasmachinebestendig": "ja"
@@ -328,7 +328,7 @@
     "description": "Lekvrije drinkfles van BPA-vrij materiaal. Handig voor school, sport of onderweg.",
     "price": 5.0,
     "category": "Keuken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw41f5b788/product/9423101_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw41f5b788/product/9423101_01_101.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "inhoud": "500ml",
       "materiaal": "tritan",
@@ -349,7 +349,7 @@
     "description": "Heerlijke slagroomtaart voor 10 personen. Te bestellen met verschillende smaken en decoraties.",
     "price": 15.0,
     "category": "Eten & Drinken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwf7a618a0/product/9650131_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw42f19d14/product/80190031_01_101.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "personen": "10",
       "bestelbaar": "ja"
@@ -370,7 +370,7 @@
     "description": "Krokante HEMA worstenbroodjes, vers uit de oven. De perfecte snack.",
     "price": 4.0,
     "category": "Eten & Drinken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw1462183b/product/9650143_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw1c652a2b/product/80190032_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "aantal": "4 stuks"
     },
@@ -389,7 +389,7 @@
     "description": "Compacte opvouwbare paraplu die in elke tas past. Stevig frame dat tegen windstoten kan.",
     "price": 8.0,
     "category": "Tassen & Accessoires",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwe10b5580/product/80180035_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwdb51a138/product/80190033_01_101.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "type": "opvouwbaar",
       "kleur": "donkerblauw"
@@ -408,7 +408,7 @@
     "description": "Set van 5 paar katoenen sokken in basiskleuren. Comfortabel en duurzaam.",
     "price": 7.0,
     "category": "Kleding",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwaf780e70/product/80120004_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwe10b5580/product/80180035_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "materiaal": "80% katoen",
       "maten": "39-46"
@@ -427,7 +427,7 @@
     "description": "Zacht dekbedovertrek van katoen. Vrolijk HEMA design. Inclusief kussensloop.",
     "price": 20.0,
     "category": "Wonen",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw0d36296e/product/9650136_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw77bd64c4/product/80660326_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "afmetingen": "140x200cm",
       "materiaal": "katoen"
@@ -446,7 +446,7 @@
     "description": "Vrolijk gekleurde regenlaars voor kinderen. Waterdicht en met anti-slip zool.",
     "price": 12.0,
     "category": "Kleding",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw77bd64c4/product/80660326_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwffa796f2/product/80660320_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "maten": "24-35",
       "materiaal": "rubber"
@@ -466,7 +466,7 @@
     "description": "Maak je eigen fotoboek met hardcover. Upload je foto's en ontwerp het online.",
     "price": 24.95,
     "category": "Foto",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwbee03903/product/9650140_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw90b647bd/product/80660318_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "formaat": "A4",
       "paginas": "24 (uitbreidbaar)",
@@ -487,7 +487,7 @@
     "description": "HEMA cadeaukaart ter waarde van €25. Te besteden in alle HEMA winkels en online.",
     "price": 25.0,
     "category": "Cadeaus",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw9d740438/product/9650401_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw55637ca9/product/80660321_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "waarde": "€25",
       "geldigheid": "5 jaar"
@@ -506,7 +506,7 @@
     "description": "Klassiek kaartspel met HEMA design. 52 kaarten plus 2 jokers.",
     "price": 2.5,
     "category": "Speelgoed & Spellen",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw55637ca9/product/80660321_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw28cf9cd5/product/80120002_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "aantal": "54 kaarten"
     },
@@ -525,7 +525,7 @@
     "description": "HEMA huismerk wasmiddel. Effectief tegen vlekken, fris resultaat. Voor 30 wasbeurten.",
     "price": 4.5,
     "category": "Huishouden",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw33f18482/product/5440005_02_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw0d36296e/product/9650136_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "inhoud": "1.5L",
       "wasbeurten": "30"
@@ -544,7 +544,7 @@
     "description": "Stevige USB-C oplaadkabel van 1 meter. Geschikt voor snel laden.",
     "price": 5.0,
     "category": "Elektronica",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwb5372d93/product/5440248_01_101.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwbee03903/product/9650140_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "lengte": "1m",
       "type": "USB-C",
@@ -565,7 +565,7 @@
     "description": "Hydraterende dagcrème met SPF15 bescherming. Lichte textuur, geschikt voor alle huidtypes.",
     "price": 6.5,
     "category": "Beauty",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw28cf9cd5/product/80120002_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dw9d740438/product/9650401_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "inhoud": "50ml",
       "spf": "15",
@@ -587,7 +587,7 @@
     "description": "Assortiment van chocoladekoekjes in een mooie doos. Perfect als cadeau of bij de koffie.",
     "price": 5.5,
     "category": "Eten & Drinken",
-    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwe5cf09ba/product/9650400_01_001.jpg?sw=400&sh=400&sm=fit",
+    "imageUrl": "https://www.hema.nl/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwe5cf09ba/product/9650400_01_001.jpg?sw=400&sfrm=png&bgcolor=FFFFFF",
     "attributes": {
       "gewicht": "300g",
       "type": "assortiment"
