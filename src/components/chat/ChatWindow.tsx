@@ -6,6 +6,7 @@ import { MessageBubble } from "./MessageBubble";
 import { TypingIndicator } from "./TypingIndicator";
 import { CartItem, UserProfile } from "@/types";
 import { DemoSwitcher } from "@/components/layout/DemoSwitcher";
+import { ShoppingPanel } from "./ShoppingPanel";
 
 interface TenantInfo {
   id: string;
@@ -234,91 +235,89 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
 
   const showSuggestions = messages.length <= 1 && !isLoading;
 
+  const hasCart = cart.length > 0;
+
   return (
-    <div className="flex flex-col h-full bg-white overflow-hidden">
-      {/* Chat header */}
-      <div
-        className="px-5 py-3.5 text-white flex items-center gap-3"
-        style={{ backgroundColor: "var(--tenant-primary)" }}
-      >
-        <div className="relative">
-          <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">
-            AI
+    <div className="flex h-full overflow-hidden">
+      {/* LHS: Chat (2/3) */}
+      <div className={`flex flex-col bg-white overflow-hidden transition-all duration-300 ${hasCart ? "w-2/3" : "w-full"}`}>
+        {/* Chat header */}
+        <div
+          className="px-5 py-3.5 text-white flex items-center gap-3 shrink-0"
+          style={{ backgroundColor: "var(--tenant-primary)" }}
+        >
+          <div className="relative">
+            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">
+              AI
+            </div>
+            <div
+              className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2"
+              style={{ borderColor: "var(--tenant-primary)" }}
+            />
           </div>
-          <div
-            className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2"
-            style={{ borderColor: "var(--tenant-primary)" }}
-          />
-        </div>
-        <div className="flex-1">
-          <div className="font-semibold text-sm">{tenant.name} Assistent</div>
-          <div className="text-xs text-white/70">Online</div>
-        </div>
-        {cart.length > 0 && (
-          <div className="flex items-center gap-1.5 bg-white/20 px-3 py-1.5 rounded-full text-xs font-semibold">
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"
-              />
-            </svg>
-            {cart.reduce((sum, item) => sum + item.quantity, 0)}
+          <div className="flex-1">
+            <div className="font-semibold text-sm">{tenant.name} Assistent</div>
+            <div className="text-xs text-white/70">Online</div>
           </div>
-        )}
-        <DemoSwitcher onScenario={(msg) => sendMessage(msg)} />
+          <DemoSwitcher onScenario={(msg) => sendMessage(msg)} />
+        </div>
+
+        {/* Messages */}
+        <div
+          ref={scrollRef}
+          className="flex-1 overflow-y-auto chat-scroll p-4 space-y-4 bg-linear-to-b from-gray-50/80 to-white min-h-0"
+        >
+          {messages.map((msg) => (
+            <MessageBubble
+              key={msg.id}
+              role={msg.role}
+              content={msg.content}
+              imageUrl={msg.imageUrl}
+              toolResults={msg.toolResults}
+              onAddToCart={handleAddToCart}
+              onCheckout={handleCheckout}
+            />
+          ))}
+
+          {isLoading && !messages.find((m) => m.id === "streaming") && (
+            <div className="flex justify-start">
+              <div className="bg-chat-assistant rounded-2xl rounded-bl-md">
+                <TypingIndicator />
+              </div>
+            </div>
+          )}
+
+          {/* Suggested questions */}
+          {showSuggestions && (
+            <div className="flex flex-wrap gap-2 mt-3">
+              {tenant.suggestedQuestions.map((q, i) => (
+                <button
+                  key={i}
+                  onClick={() => handleSuggestedQuestion(q)}
+                  className="px-3.5 py-2 text-xs rounded-full border border-gray-200 bg-white text-gray-600
+                    hover:border-primary hover:text-primary hover:bg-gray-50 transition-all shadow-sm"
+                >
+                  {q}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Input */}
+        <ChatInput onSend={sendMessage} disabled={isLoading} />
       </div>
 
-      {/* Messages */}
-      <div
-        ref={scrollRef}
-        className="flex-1 overflow-y-auto chat-scroll p-4 space-y-4 bg-linear-to-b from-gray-50/80 to-white min-h-0"
-      >
-        {messages.map((msg) => (
-          <MessageBubble
-            key={msg.id}
-            role={msg.role}
-            content={msg.content}
-            imageUrl={msg.imageUrl}
-            toolResults={msg.toolResults}
-            onAddToCart={handleAddToCart}
+      {/* RHS: Shopping Panel (1/3) — slides in when cart has items */}
+      {hasCart && (
+        <div className="w-1/3 shrink-0 animate-slide-in-right">
+          <ShoppingPanel
+            cart={cart}
+            onAddSuggested={(id) => sendMessage(`Voeg product ${id} toe aan mijn winkelwagen`)}
             onCheckout={handleCheckout}
           />
-        ))}
-
-        {isLoading && !messages.find((m) => m.id === "streaming") && (
-          <div className="flex justify-start">
-            <div className="bg-chat-assistant rounded-2xl rounded-bl-md">
-              <TypingIndicator />
-            </div>
-          </div>
-        )}
-
-        {/* Suggested questions */}
-        {showSuggestions && (
-          <div className="flex flex-wrap gap-2 mt-3">
-            {tenant.suggestedQuestions.map((q, i) => (
-              <button
-                key={i}
-                onClick={() => handleSuggestedQuestion(q)}
-                className="px-3.5 py-2 text-xs rounded-full border border-gray-200 bg-white text-gray-600
-                  hover:border-primary hover:text-primary hover:bg-gray-50 transition-all shadow-sm"
-              >
-                {q}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Input */}
-      <ChatInput onSend={sendMessage} disabled={isLoading} />
+        </div>
+      )}
     </div>
   );
 }
