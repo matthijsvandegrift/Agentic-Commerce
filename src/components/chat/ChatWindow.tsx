@@ -313,6 +313,8 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
         <div className="w-1/3 shrink-0 animate-slide-in-right">
           <ShoppingPanel
             cart={cart}
+            tenantName={tenant.name}
+            loyaltyName={tenant.id === "hema" ? "Meer HEMA" : "Etos Bonuskaart"}
             onAddSuggested={(id) => sendMessage(`Voeg product ${id} toe aan mijn winkelwagen`)}
             onCheckout={handleCheckout}
           />
