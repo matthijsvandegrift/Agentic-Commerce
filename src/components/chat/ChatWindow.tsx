@@ -170,13 +170,13 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
                     },
                   ];
                 });
-              } else if (data.userProfile) {
-                setUserProfile(data.userProfile);
               } else if (data.cart) {
                 setCart(data.cart);
                 if (data.userProfile) {
                   setUserProfile(data.userProfile);
                 }
+              } else if (data.userProfile && !data.cart) {
+                setUserProfile(data.userProfile);
               } else if (
                 data.message &&
                 !data.content &&

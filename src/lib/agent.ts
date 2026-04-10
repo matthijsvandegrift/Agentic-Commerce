@@ -112,7 +112,7 @@ export function executeTool(
     case "search_products": {
       const query = toolInput.query as string;
       const category = toolInput.category as string | undefined;
-      const maxResults = (toolInput.maxResults as number) || 3;
+      const maxResults = Math.min((toolInput.maxResults as number) || 2, 3);
       const products = searchProducts(
         tenant.catalogPath,
         query,
@@ -223,13 +223,33 @@ export function executeTool(
       }
       const summary = formatCartSummary(cart);
       const orderId = `ORD-${Date.now().toString(36).toUpperCase()}`;
+      const trackingCode = `3S${Math.random().toString(36).substring(2, 16).toUpperCase()}NL`;
+      const street = toolInput.street as string || "";
+      const city = toolInput.city as string || "";
+      const postalCode = toolInput.postalCode as string || "";
+      const paymentMethod = toolInput.paymentMethod as string || "ideal";
+      const deliveryMethod = toolInput.deliveryMethod as string || "bezorgen";
+      const tomorrow = new Date(Date.now() + 86400000);
+      const deliveryDate = tomorrow.toLocaleDateString("nl-NL", { weekday: "long", day: "numeric", month: "long" });
+
       return {
         result: {
           orderId,
           status: "bevestigd",
           items: summary.items,
           total: summary.total,
-          message: `Bestelling ${orderId} is geplaatst! Totaal: €${summary.total.toFixed(2)}. Je ontvangt een bevestigingsmail.`,
+          delivery: {
+            method: deliveryMethod,
+            address: deliveryMethod === "bezorgen" ? `${street}, ${postalCode} ${city}` : null,
+            estimatedDate: deliveryDate,
+            carrier: "PostNL",
+            trackingCode,
+            trackingUrl: `https://postnl.nl/tracktrace/?B=${trackingCode}&P=${postalCode.replace(/\s/g, "")}&D=NL`,
+          },
+          payment: {
+            method: paymentMethod,
+            status: "betaald",
+          },
         },
         cart: [],
         displayType: "checkout_confirm",

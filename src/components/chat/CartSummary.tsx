@@ -72,25 +72,103 @@ interface CheckoutConfirmProps {
   order: {
     orderId: string;
     total: number;
-    message: string;
+    delivery?: {
+      method: string;
+      address?: string | null;
+      estimatedDate: string;
+      carrier: string;
+      trackingCode: string;
+      trackingUrl: string;
+    };
+    payment?: {
+      method: string;
+      status: string;
+    };
   };
 }
 
+const paymentLabels: Record<string, string> = {
+  ideal: "iDEAL",
+  creditcard: "Creditcard",
+  paypal: "PayPal",
+};
+
 export function CheckoutConfirm({ order }: CheckoutConfirmProps) {
   return (
-    <div className="mt-2 bg-green-50 rounded-xl border border-green-200 p-4 animate-fade-in">
-      <div className="flex items-center gap-2 text-green-700 font-semibold text-sm">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-        </svg>
-        Bestelling bevestigd!
+    <div className="mt-2 bg-white rounded-xl border border-green-200 overflow-hidden animate-fade-in">
+      {/* Success header */}
+      <div className="bg-green-50 px-4 py-3 flex items-center gap-2">
+        <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <div className="font-semibold text-sm text-green-800">Bestelling geplaatst!</div>
+          <div className="text-xs text-green-600 font-mono">{order.orderId}</div>
+        </div>
+        <div className="ml-auto text-right">
+          <div className="font-bold text-green-800">
+            &euro;{order.total.toFixed(2).replace(".", ",")}
+          </div>
+        </div>
       </div>
-      <p className="text-sm text-green-600 mt-1">
-        Ordernummer: <span className="font-mono font-bold">{order.orderId}</span>
-      </p>
-      <p className="text-sm text-green-600 mt-0.5">
-        Totaal: &euro;{order.total.toFixed(2).replace(".", ",")}
-      </p>
+
+      {/* Payment */}
+      {order.payment && (
+        <div className="px-4 py-2.5 flex items-center gap-2 border-b border-gray-100">
+          <div className="w-6 h-6 rounded bg-orange-50 flex items-center justify-center">
+            <svg className="w-3.5 h-3.5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+            </svg>
+          </div>
+          <span className="text-xs text-gray-600">
+            {paymentLabels[order.payment.method] || order.payment.method}
+          </span>
+          <span className="ml-auto text-xs font-medium text-green-600">Betaald</span>
+        </div>
+      )}
+
+      {/* Delivery */}
+      {order.delivery && (
+        <div className="px-4 py-2.5 border-b border-gray-100">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded bg-blue-50 flex items-center justify-center">
+              <svg className="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="text-xs text-gray-600">
+                {order.delivery.carrier} &middot; {order.delivery.estimatedDate}
+              </div>
+              {order.delivery.address && (
+                <div className="text-[11px] text-gray-400">{order.delivery.address}</div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Tracking */}
+      {order.delivery?.trackingCode && (
+        <div className="px-4 py-2.5">
+          <div className="flex items-center justify-between">
+            <div className="text-xs text-gray-500">
+              Track & Trace: <span className="font-mono text-gray-700">{order.delivery.trackingCode}</span>
+            </div>
+            <a
+              href={order.delivery.trackingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] font-medium px-2 py-1 rounded-md text-white"
+              style={{ backgroundColor: "var(--tenant-primary)" }}
+            >
+              Volg pakket
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -105,11 +105,34 @@ export const agentTools: Anthropic.Tool[] = [
   {
     name: "checkout",
     description:
-      "Process the checkout. Call this when the customer confirms they want to complete their purchase.",
+      "Process the checkout. IMPORTANT: Before calling this, you MUST first ask the customer for: 1) delivery address (street, city, postal code), 2) payment method (always suggest iDEAL). Only call this tool AFTER you have collected all info.",
     input_schema: {
       type: "object" as const,
-      properties: {},
-      required: [],
+      properties: {
+        street: {
+          type: "string",
+          description: "Street name and house number",
+        },
+        city: {
+          type: "string",
+          description: "City name",
+        },
+        postalCode: {
+          type: "string",
+          description: "Postal code (e.g. 1012 AB)",
+        },
+        paymentMethod: {
+          type: "string",
+          enum: ["ideal", "creditcard", "paypal"],
+          description: "Payment method chosen by customer",
+        },
+        deliveryMethod: {
+          type: "string",
+          enum: ["bezorgen", "ophalen"],
+          description: "Delivery method: bezorgen (PostNL) or ophalen (store pickup)",
+        },
+      },
+      required: ["street", "city", "postalCode", "paymentMethod"],
     },
   },
   {
