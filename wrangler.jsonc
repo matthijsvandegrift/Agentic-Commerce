@@ -1,5 +1,6 @@
 {
   "name": "agentic-commerce",
+  "main": ".open-next/worker.js",
   "compatibility_flags": ["nodejs_compat"],
   "compatibility_date": "2025-04-01",
   "assets": {
