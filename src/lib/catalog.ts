@@ -1,19 +1,17 @@
 import { Product } from "@/types";
-import fs from "fs";
-import path from "path";
+import hemaProducts from "@/data/hema/products.json";
+import kruidvatProducts from "@/data/kruidvat/products.json";
 
-const catalogCache = new Map<string, Product[]>();
+const catalogs: Record<string, Product[]> = {
+  "data/hema/products.json": hemaProducts as unknown as Product[],
+  "data/kruidvat/products.json": kruidvatProducts as unknown as Product[],
+};
 
 export function loadCatalog(catalogPath: string): Product[] {
-  if (catalogCache.has(catalogPath)) {
-    return catalogCache.get(catalogPath)!;
+  const products = catalogs[catalogPath];
+  if (!products) {
+    throw new Error(`Catalog not found: ${catalogPath}`);
   }
-
-  const projectRoot = /* turbopackIgnore: true */ process.cwd();
-  const fullPath = path.join(projectRoot, catalogPath);
-  const raw = fs.readFileSync(fullPath, "utf-8");
-  const products: Product[] = JSON.parse(raw);
-  catalogCache.set(catalogPath, products);
   return products;
 }
 
@@ -31,8 +29,8 @@ export function searchProducts(
 
   if (category) {
     const catLower = category.toLowerCase();
-    filtered = filtered.filter(
-      (p) => p.category.toLowerCase().includes(catLower)
+    filtered = filtered.filter((p) =>
+      p.category.toLowerCase().includes(catLower)
     );
   }
 
