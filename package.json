@@ -9,7 +9,9 @@
     "preview": "opennextjs-cloudflare preview",
     "cf:deploy": "opennextjs-cloudflare build && wrangler deploy",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "scrape:hema": "npx tsx scripts/scrape-hema.ts",
+    "scrape:images": "npx tsx scripts/download-images.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.87.0",
@@ -27,7 +29,9 @@
     "@types/uuid": "^10.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
+    "playwright": "^1.59.1",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

@@ -1,0 +1,37 @@
+{
+  "programName": "Kruidvat Voordelen",
+  "customer": {
+    "name": "Sophie Jansen",
+    "memberId": "KV-5839201",
+    "tier": "Goud",
+    "points": 3800,
+    "pointsValue": 19.00,
+    "tierThresholds": {
+      "Standaard": 0,
+      "Zilver": 1500,
+      "Goud": 3000
+    },
+    "pointsToNextTier": null,
+    "nextTier": null
+  },
+  "recentPurchases": [
+    {
+      "orderId": "KV-ORD-1234",
+      "date": "2026-04-05",
+      "items": ["L'Oréal Elvive Shampoo", "Nivea Dagcrème"],
+      "total": 11.98,
+      "pointsEarned": 24
+    },
+    {
+      "orderId": "KV-ORD-1190",
+      "date": "2026-03-22",
+      "items": ["Pampers Luiers Maat 4"],
+      "total": 14.99,
+      "pointsEarned": 30
+    }
+  ],
+  "recommendations": [
+    "Je koopt regelmatig L'Oréal Elvive — er is nu een 1+1 gratis actie!",
+    "Met 3800 punten kun je €19 korting krijgen."
+  ]
+}

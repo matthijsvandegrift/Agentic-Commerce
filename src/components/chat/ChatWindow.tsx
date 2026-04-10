@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { ChatInput } from "./ChatInput";
 import { MessageBubble } from "./MessageBubble";
 import { TypingIndicator } from "./TypingIndicator";
-import { CartItem } from "@/types";
+import { CartItem, UserProfile } from "@/types";
 
 interface TenantInfo {
   id: string;
@@ -19,8 +19,9 @@ interface Message {
   id: string;
   role: "user" | "assistant";
   content: string;
+  imageUrl?: string;
   toolResults?: {
-    type: "product_list" | "product_detail" | "cart_update" | "checkout_confirm";
+    type: string;
     data: any;
   }[];
 }
@@ -34,6 +35,7 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
     },
   ]);
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [userProfile, setUserProfile] = useState<UserProfile>({});
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [conversationHistory, setConversationHistory] = useState<
@@ -50,17 +52,24 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
     scrollToBottom();
   }, [messages, isLoading, scrollToBottom]);
 
-  async function sendMessage(text: string) {
+  async function sendMessage(
+    text: string,
+    imageData?: { base64: string; mediaType: string; previewUrl: string }
+  ) {
     const userMessage: Message = {
       id: Date.now().toString(),
       role: "user",
       content: text,
+      imageUrl: imageData?.previewUrl,
     };
 
     setMessages((prev) => [...prev, userMessage]);
     setIsLoading(true);
 
-    const newHistory = [...conversationHistory, { role: "user" as const, content: text }];
+    const newHistory = [
+      ...conversationHistory,
+      { role: "user" as const, content: text },
+    ];
 
     try {
       const response = await fetch("/api/chat", {
@@ -70,6 +79,13 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
           messages: newHistory,
           cart,
           tenantId: tenant.id,
+          userProfile,
+          ...(imageData && {
+            imageData: {
+              base64: imageData.base64,
+              mediaType: imageData.mediaType,
+            },
+          }),
         }),
       });
 
@@ -82,7 +98,6 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
       let buffer = "";
       let assistantContent = "";
       const toolResults: Message["toolResults"] = [];
-      let updatedCart = cart;
 
       while (true) {
         const { done, value } = await reader.read();
@@ -94,9 +109,6 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
 
         for (const line of lines) {
           if (line.startsWith("event: ")) {
-            const eventType = line.slice(7).trim();
-            const dataLineIndex = lines.indexOf(line) + 1;
-            // We need to handle this differently - find the data line
             continue;
           }
           if (line.startsWith("data: ")) {
@@ -104,11 +116,6 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
             try {
               const data = JSON.parse(jsonStr);
 
-              // Find the event type from the preceding event line
-              const eventLine = lines.find(
-                (l, i) => l.startsWith("event: ") && lines[i + 1] === line
-              );
-              // Fallback: check buffer context
               if (data.content !== undefined) {
                 assistantContent += data.content;
                 setMessages((prev) => {
@@ -116,7 +123,11 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
                   if (existing) {
                     return prev.map((m) =>
                       m.id === "streaming"
-                        ? { ...m, content: assistantContent, toolResults: [...toolResults] }
+                        ? {
+                            ...m,
+                            content: assistantContent,
+                            toolResults: [...toolResults],
+                          }
                         : m
                     );
                   }
@@ -140,7 +151,11 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
                   if (existing) {
                     return prev.map((m) =>
                       m.id === "streaming"
-                        ? { ...m, content: assistantContent, toolResults: [...toolResults] }
+                        ? {
+                            ...m,
+                            content: assistantContent,
+                            toolResults: [...toolResults],
+                          }
                         : m
                     );
                   }
@@ -154,12 +169,20 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
                     },
                   ];
                 });
+              } else if (data.userProfile) {
+                setUserProfile(data.userProfile);
               } else if (data.cart) {
-                updatedCart = data.cart;
                 setCart(data.cart);
-              } else if (data.message && !data.content && !data.toolName && !data.cart) {
-                // error event
-                assistantContent += `\n\n⚠️ ${data.message}`;
+                if (data.userProfile) {
+                  setUserProfile(data.userProfile);
+                }
+              } else if (
+                data.message &&
+                !data.content &&
+                !data.toolName &&
+                !data.cart
+              ) {
+                assistantContent += `\n\n${data.message}`;
               }
             } catch {
               // Skip malformed JSON
@@ -188,8 +211,7 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
         {
           id: `error-${Date.now()}`,
           role: "assistant",
-          content:
-            "Sorry, er ging iets mis. Probeer het opnieuw.",
+          content: "Sorry, er ging iets mis. Probeer het opnieuw.",
         },
       ]);
     } finally {
@@ -215,19 +237,30 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
     <div className="flex flex-col h-full bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
       {/* Chat header */}
       <div
-        className="px-4 py-3 text-white flex items-center gap-3"
+        className="px-5 py-3.5 text-white flex items-center gap-3"
         style={{ backgroundColor: "var(--tenant-primary)" }}
       >
-        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">
-          AI
+        <div className="relative">
+          <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">
+            AI
+          </div>
+          <div
+            className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2"
+            style={{ borderColor: "var(--tenant-primary)" }}
+          />
         </div>
-        <div>
+        <div className="flex-1">
           <div className="font-semibold text-sm">{tenant.name} Assistent</div>
-          <div className="text-xs text-white/70">Online — klaar om te helpen</div>
+          <div className="text-xs text-white/70">Online</div>
         </div>
         {cart.length > 0 && (
-          <div className="ml-auto flex items-center gap-1.5 bg-white/20 px-2.5 py-1 rounded-full text-xs font-medium">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-1.5 bg-white/20 px-3 py-1.5 rounded-full text-xs font-semibold">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -243,13 +276,14 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
       {/* Messages */}
       <div
         ref={scrollRef}
-        className="flex-1 overflow-y-auto chat-scroll p-4 space-y-4 bg-gray-50/50"
+        className="flex-1 overflow-y-auto chat-scroll p-4 space-y-4 bg-linear-to-b from-gray-50/80 to-white min-h-0"
       >
         {messages.map((msg) => (
           <MessageBubble
             key={msg.id}
             role={msg.role}
             content={msg.content}
+            imageUrl={msg.imageUrl}
             toolResults={msg.toolResults}
             onAddToCart={handleAddToCart}
             onCheckout={handleCheckout}
@@ -266,14 +300,13 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
 
         {/* Suggested questions */}
         {showSuggestions && (
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="flex flex-wrap gap-2 mt-3">
             {tenant.suggestedQuestions.map((q, i) => (
               <button
                 key={i}
                 onClick={() => handleSuggestedQuestion(q)}
-                className="px-3 py-2 text-xs rounded-xl border border-gray-200 bg-white text-gray-600
-                  hover:border-primary hover:text-primary transition-colors"
-                style={{ "--tw-border-opacity": 1 } as any}
+                className="px-3.5 py-2 text-xs rounded-full border border-gray-200 bg-white text-gray-600
+                  hover:border-primary hover:text-primary hover:bg-gray-50 transition-all shadow-sm"
               >
                 {q}
               </button>

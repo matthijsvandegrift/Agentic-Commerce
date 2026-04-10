@@ -1,0 +1,55 @@
+{
+  "activePromotions": [
+    {
+      "id": "promo-001",
+      "label": "2e halve prijs",
+      "description": "Op alle basics: t-shirts, sokken en boxershorts",
+      "discountPercent": 25,
+      "startDate": "2026-04-01",
+      "endDate": "2026-04-14",
+      "applicableCategories": ["Kleding"],
+      "applicableProductIds": ["hema-003", "hema-004", "hema-013", "hema-021"]
+    },
+    {
+      "id": "promo-002",
+      "label": "3 voor €10",
+      "description": "Op alle geurkaarsen",
+      "startDate": "2026-04-07",
+      "endDate": "2026-04-20",
+      "applicableCategories": ["Wonen"],
+      "applicableProductIds": ["hema-007"]
+    },
+    {
+      "id": "promo-003",
+      "label": "Gratis verzending",
+      "description": "Bij bestellingen boven €25",
+      "startDate": "2026-04-01",
+      "endDate": "2026-04-30"
+    }
+  ],
+  "discountCodes": [
+    {
+      "code": "WELKOM10",
+      "description": "10% korting voor nieuwe klanten",
+      "discountPercent": 10,
+      "minimumOrder": 15.00,
+      "validUntil": "2026-12-31",
+      "singleUse": true
+    },
+    {
+      "code": "LENTE2026",
+      "description": "€5 korting op je bestelling",
+      "discountFixed": 5.00,
+      "minimumOrder": 25.00,
+      "validUntil": "2026-04-30",
+      "singleUse": false
+    },
+    {
+      "code": "MEERHEMA",
+      "description": "Dubbele spaarpunten voor Meer HEMA leden",
+      "doublePoints": true,
+      "validUntil": "2026-04-15",
+      "singleUse": false
+    }
+  ]
+}

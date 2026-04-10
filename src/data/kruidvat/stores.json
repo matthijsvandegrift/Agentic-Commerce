@@ -1,0 +1,59 @@
+[
+  {
+    "id": "kv-store-001",
+    "name": "Kruidvat Damrak",
+    "address": "Damrak 73",
+    "city": "Amsterdam",
+    "postalCode": "1012 LP",
+    "phone": "020-624 7788",
+    "coordinates": { "lat": 52.3738, "lng": 4.8956 },
+    "openingHours": {
+      "maandag": "09:00 - 21:00",
+      "dinsdag": "09:00 - 21:00",
+      "woensdag": "09:00 - 21:00",
+      "donderdag": "09:00 - 21:00",
+      "vrijdag": "09:00 - 21:00",
+      "zaterdag": "09:00 - 21:00",
+      "zondag": "10:00 - 20:00"
+    },
+    "services": ["click & collect", "retouren", "bloeddruk meten"]
+  },
+  {
+    "id": "kv-store-002",
+    "name": "Kruidvat Rotterdam Beurstraverse",
+    "address": "Beurstraverse 38",
+    "city": "Rotterdam",
+    "postalCode": "3011 AG",
+    "phone": "010-411 9922",
+    "coordinates": { "lat": 51.9225, "lng": 4.4791 },
+    "openingHours": {
+      "maandag": "09:00 - 20:00",
+      "dinsdag": "09:00 - 20:00",
+      "woensdag": "09:00 - 20:00",
+      "donderdag": "09:00 - 21:00",
+      "vrijdag": "09:00 - 20:00",
+      "zaterdag": "09:00 - 20:00",
+      "zondag": "11:00 - 18:00"
+    },
+    "services": ["click & collect", "retouren"]
+  },
+  {
+    "id": "kv-store-003",
+    "name": "Kruidvat Utrecht Hoog Catharijne",
+    "address": "Hoog Catharijne 88",
+    "city": "Utrecht",
+    "postalCode": "3511 EP",
+    "phone": "030-231 4455",
+    "coordinates": { "lat": 52.0897, "lng": 5.1107 },
+    "openingHours": {
+      "maandag": "09:00 - 20:00",
+      "dinsdag": "09:00 - 20:00",
+      "woensdag": "09:00 - 20:00",
+      "donderdag": "09:00 - 21:00",
+      "vrijdag": "09:00 - 20:00",
+      "zaterdag": "09:00 - 20:00",
+      "zondag": "11:00 - 18:00"
+    },
+    "services": ["click & collect", "retouren", "bloeddruk meten"]
+  }
+]

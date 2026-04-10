@@ -1,18 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { demoScenarios } from "@/config/demo-scenarios";
 
 const TENANTS = [
   { id: "hema", name: "HEMA" },
   { id: "kruidvat", name: "Kruidvat" },
 ];
 
-export function DemoSwitcher() {
+interface DemoSwitcherProps {
+  onScenario?: (message: string) => void;
+}
+
+export function DemoSwitcher({ onScenario }: DemoSwitcherProps) {
   const [open, setOpen] = useState(false);
 
   function switchTenant(tenantId: string) {
     document.cookie = `tenant=${tenantId};path=/;max-age=86400`;
     window.location.reload();
+  }
+
+  function startScenario(message: string) {
+    setOpen(false);
+    onScenario?.(message);
   }
 
   return (
@@ -47,7 +57,7 @@ export function DemoSwitcher() {
       {open && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 animate-fade-in">
+          <div className="absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 animate-fade-in">
             <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase tracking-wider">
               Switch Brand
             </div>
@@ -60,6 +70,28 @@ export function DemoSwitcher() {
                 {t.name}
               </button>
             ))}
+
+            {onScenario && (
+              <>
+                <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase tracking-wider border-t border-gray-100">
+                  Demo Scenarios
+                </div>
+                {demoScenarios.map((scenario) => (
+                  <button
+                    key={scenario.id}
+                    onClick={() => startScenario(scenario.initialMessage)}
+                    className="w-full text-left px-3 py-2 hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="text-sm text-gray-700 font-medium">
+                      {scenario.name}
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      {scenario.description}
+                    </div>
+                  </button>
+                ))}
+              </>
+            )}
           </div>
         </>
       )}

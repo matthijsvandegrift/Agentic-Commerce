@@ -112,4 +112,196 @@ export const agentTools: Anthropic.Tool[] = [
       required: [],
     },
   },
+  {
+    name: "update_user_profile",
+    description:
+      "Update the customer's profile with preferences you've learned during the conversation. Call this proactively when the customer mentions ages, interests, budget, occasion, or who they're shopping for. This helps you give better recommendations throughout the session.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        mentionedAges: {
+          type: "array",
+          items: { type: "string" },
+          description: 'Ages mentioned (e.g. ["7 jaar", "volwassene"])',
+        },
+        interests: {
+          type: "array",
+          items: { type: "string" },
+          description: 'Interests detected (e.g. ["dinosaurussen", "voetbal"])',
+        },
+        budget: {
+          type: "object",
+          properties: {
+            min: { type: "number" },
+            max: { type: "number" },
+          },
+          description: "Budget range in EUR",
+        },
+        occasion: {
+          type: "string",
+          description:
+            'Shopping occasion (e.g. "verjaardag", "back to school", "sinterklaas")',
+        },
+        shoppingFor: {
+          type: "string",
+          description:
+            'Who they are shopping for (e.g. "dochter", "zelf", "collega")',
+        },
+        preferences: {
+          type: "object",
+          additionalProperties: { type: "string" },
+          description:
+            'Other preferences as key-value pairs (e.g. {"kleur": "blauw", "stijl": "minimalistisch"})',
+        },
+      },
+      required: [],
+    },
+  },
+  {
+    name: "check_store_stock",
+    description:
+      "Check if a product is available at a specific store or in stores in a city. Use when customer asks about in-store availability.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        productId: {
+          type: "string",
+          description: "The product ID to check",
+        },
+        city: {
+          type: "string",
+          description: "City name to search stores in (e.g. 'Amsterdam')",
+        },
+        storeId: {
+          type: "string",
+          description: "Specific store ID (optional, use city instead for broader search)",
+        },
+      },
+      required: ["productId"],
+    },
+  },
+  {
+    name: "find_nearest_store",
+    description:
+      "Find the nearest stores based on city or postal code. Use when customer asks about store locations.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        query: {
+          type: "string",
+          description: "City name or postal code",
+        },
+      },
+      required: ["query"],
+    },
+  },
+  {
+    name: "get_store_info",
+    description:
+      "Get detailed information about a specific store (opening hours, services, address).",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        storeId: {
+          type: "string",
+          description: "The store ID",
+        },
+      },
+      required: ["storeId"],
+    },
+  },
+  {
+    name: "check_loyalty_balance",
+    description:
+      "Check the customer's loyalty program balance, tier status, and recent purchase history. Use when customer asks about points, rewards, or their account.",
+    input_schema: {
+      type: "object" as const,
+      properties: {},
+      required: [],
+    },
+  },
+  {
+    name: "redeem_points",
+    description:
+      "Redeem loyalty points for a discount on the current order.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        points: {
+          type: "number",
+          description: "Number of points to redeem",
+        },
+      },
+      required: ["points"],
+    },
+  },
+  {
+    name: "get_purchase_history",
+    description:
+      "Get the customer's recent purchase history from their loyalty account.",
+    input_schema: {
+      type: "object" as const,
+      properties: {},
+      required: [],
+    },
+  },
+  {
+    name: "apply_discount_code",
+    description:
+      "Validate and apply a discount/coupon code to the current order.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        code: {
+          type: "string",
+          description: "The discount code to apply",
+        },
+      },
+      required: ["code"],
+    },
+  },
+  {
+    name: "track_order",
+    description:
+      "Track the status of an existing order by order ID.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        orderId: {
+          type: "string",
+          description: "The order ID to track",
+        },
+      },
+      required: ["orderId"],
+    },
+  },
+  {
+    name: "request_human_handoff",
+    description:
+      "Transfer the customer to a human agent when the issue requires human intervention: complaints, complex returns, frustration, or questions outside your capabilities. Always include a summary so the human agent has full context.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        reason: {
+          type: "string",
+          description: "Why the handoff is needed",
+        },
+        conversationSummary: {
+          type: "string",
+          description: "Brief summary of the conversation so far for the human agent",
+        },
+        customerMood: {
+          type: "string",
+          enum: ["neutral", "frustrated", "angry", "confused"],
+          description: "The customer's current mood",
+        },
+        department: {
+          type: "string",
+          enum: ["klantenservice", "retouren", "klachten", "technisch"],
+          description: "Which department to transfer to",
+        },
+      },
+      required: ["reason", "conversationSummary"],
+    },
+  },
 ];

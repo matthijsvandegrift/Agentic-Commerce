@@ -1,0 +1,29 @@
+{
+  "activePromotions": [
+    {
+      "id": "kv-promo-001",
+      "label": "1+1 gratis",
+      "description": "Op alle L'Oréal Elvive producten",
+      "startDate": "2026-04-07",
+      "endDate": "2026-04-20"
+    },
+    {
+      "id": "kv-promo-002",
+      "label": "25% korting",
+      "description": "Op alle Nivea producten",
+      "discountPercent": 25,
+      "startDate": "2026-04-01",
+      "endDate": "2026-04-14"
+    }
+  ],
+  "discountCodes": [
+    {
+      "code": "WELKOM15",
+      "description": "15% korting voor nieuwe klanten",
+      "discountPercent": 15,
+      "minimumOrder": 10.00,
+      "validUntil": "2026-12-31",
+      "singleUse": true
+    }
+  ]
+}

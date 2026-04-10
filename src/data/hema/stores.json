@@ -1,0 +1,192 @@
+[
+  {
+    "id": "hema-store-001",
+    "name": "HEMA Kalverstraat",
+    "address": "Kalverstraat 212",
+    "city": "Amsterdam",
+    "postalCode": "1012 PH",
+    "phone": "020-422 8988",
+    "coordinates": { "lat": 52.3702, "lng": 4.8905 },
+    "openingHours": {
+      "maandag": "11:00 - 19:00",
+      "dinsdag": "09:30 - 19:00",
+      "woensdag": "09:30 - 19:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 19:00",
+      "zaterdag": "09:30 - 19:00",
+      "zondag": "12:00 - 18:00"
+    },
+    "services": ["click & collect", "retouren", "cadeauverpakking", "foto-service"]
+  },
+  {
+    "id": "hema-store-002",
+    "name": "HEMA Nieuwendijk",
+    "address": "Nieuwendijk 174",
+    "city": "Amsterdam",
+    "postalCode": "1012 MS",
+    "phone": "020-623 4176",
+    "coordinates": { "lat": 52.3766, "lng": 4.8942 },
+    "openingHours": {
+      "maandag": "10:00 - 19:00",
+      "dinsdag": "09:30 - 19:00",
+      "woensdag": "09:30 - 19:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 19:00",
+      "zaterdag": "09:30 - 19:00",
+      "zondag": "11:00 - 18:00"
+    },
+    "services": ["click & collect", "retouren"]
+  },
+  {
+    "id": "hema-store-003",
+    "name": "HEMA Rotterdam Lijnbaan",
+    "address": "Lijnbaan 85",
+    "city": "Rotterdam",
+    "postalCode": "3012 EN",
+    "phone": "010-411 3344",
+    "coordinates": { "lat": 51.9215, "lng": 4.4764 },
+    "openingHours": {
+      "maandag": "11:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren", "cadeauverpakking"]
+  },
+  {
+    "id": "hema-store-004",
+    "name": "HEMA Den Haag Grote Marktstraat",
+    "address": "Grote Marktstraat 58",
+    "city": "Den Haag",
+    "postalCode": "2511 BJ",
+    "phone": "070-346 6755",
+    "coordinates": { "lat": 52.0772, "lng": 4.3107 },
+    "openingHours": {
+      "maandag": "11:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren"]
+  },
+  {
+    "id": "hema-store-005",
+    "name": "HEMA Utrecht Hoog Catharijne",
+    "address": "Hoog Catharijne 115",
+    "city": "Utrecht",
+    "postalCode": "3511 EP",
+    "phone": "030-231 0880",
+    "coordinates": { "lat": 52.0894, "lng": 5.1101 },
+    "openingHours": {
+      "maandag": "10:00 - 20:00",
+      "dinsdag": "09:30 - 20:00",
+      "woensdag": "09:30 - 20:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 20:00",
+      "zaterdag": "09:30 - 20:00",
+      "zondag": "11:00 - 18:00"
+    },
+    "services": ["click & collect", "retouren", "cadeauverpakking", "foto-service"]
+  },
+  {
+    "id": "hema-store-006",
+    "name": "HEMA Eindhoven Piazza",
+    "address": "Piazza Center 5",
+    "city": "Eindhoven",
+    "postalCode": "5611 AE",
+    "phone": "040-244 2233",
+    "coordinates": { "lat": 51.4393, "lng": 5.4781 },
+    "openingHours": {
+      "maandag": "10:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren"]
+  },
+  {
+    "id": "hema-store-007",
+    "name": "HEMA Groningen Herestraat",
+    "address": "Herestraat 73",
+    "city": "Groningen",
+    "postalCode": "9711 LE",
+    "phone": "050-312 6644",
+    "coordinates": { "lat": 53.2178, "lng": 6.5665 },
+    "openingHours": {
+      "maandag": "11:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren", "foto-service"]
+  },
+  {
+    "id": "hema-store-008",
+    "name": "HEMA Maastricht Grote Staat",
+    "address": "Grote Staat 44",
+    "city": "Maastricht",
+    "postalCode": "6211 CX",
+    "phone": "043-321 5566",
+    "coordinates": { "lat": 50.8514, "lng": 5.6901 },
+    "openingHours": {
+      "maandag": "11:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren"]
+  },
+  {
+    "id": "hema-store-009",
+    "name": "HEMA Arnhem Musiskwartier",
+    "address": "Musiskwartier 33",
+    "city": "Arnhem",
+    "postalCode": "6811 DJ",
+    "phone": "026-351 2233",
+    "coordinates": { "lat": 51.9851, "lng": 5.9077 },
+    "openingHours": {
+      "maandag": "10:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren"]
+  },
+  {
+    "id": "hema-store-010",
+    "name": "HEMA Tilburg Emmapassage",
+    "address": "Emmapassage 12",
+    "city": "Tilburg",
+    "postalCode": "5038 CT",
+    "phone": "013-535 1122",
+    "coordinates": { "lat": 51.5573, "lng": 5.0844 },
+    "openingHours": {
+      "maandag": "10:00 - 18:00",
+      "dinsdag": "09:30 - 18:00",
+      "woensdag": "09:30 - 18:00",
+      "donderdag": "09:30 - 21:00",
+      "vrijdag": "09:30 - 18:00",
+      "zaterdag": "09:30 - 18:00",
+      "zondag": "12:00 - 17:00"
+    },
+    "services": ["click & collect", "retouren"]
+  }
+]

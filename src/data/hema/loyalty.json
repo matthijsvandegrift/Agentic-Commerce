@@ -1,0 +1,52 @@
+{
+  "programName": "Meer HEMA",
+  "customer": {
+    "name": "Lisa de Vries",
+    "memberId": "MH-2847391",
+    "tier": "Zilver",
+    "points": 2450,
+    "pointsValue": 24.50,
+    "tierThresholds": {
+      "Brons": 0,
+      "Zilver": 1000,
+      "Goud": 5000
+    },
+    "pointsToNextTier": 2550,
+    "nextTier": "Goud"
+  },
+  "recentPurchases": [
+    {
+      "orderId": "ORD-AH82K",
+      "date": "2026-04-03",
+      "items": ["HEMA Rookworst", "HEMA Handdoek 70x140cm"],
+      "total": 12.50,
+      "pointsEarned": 13
+    },
+    {
+      "orderId": "ORD-BF93L",
+      "date": "2026-03-21",
+      "items": ["HEMA Basic T-shirt Heren", "HEMA Sokken 5-pack"],
+      "total": 13.00,
+      "pointsEarned": 13
+    },
+    {
+      "orderId": "ORD-CK47M",
+      "date": "2026-03-08",
+      "items": ["HEMA Tompouce", "HEMA Worstenbroodje 4 stuks", "HEMA Koffiebekers To-Go"],
+      "total": 9.50,
+      "pointsEarned": 10
+    },
+    {
+      "orderId": "ORD-DL28N",
+      "date": "2026-02-14",
+      "items": ["HEMA Geurkaars Vanille", "HEMA Fotokader 13x18cm", "HEMA Chocoladeletters Melk"],
+      "total": 14.00,
+      "pointsEarned": 14
+    }
+  ],
+  "recommendations": [
+    "Op basis van je aankopen: je koopt regelmatig rookworst. Wist je dat er nu een XL-verpakking in de aanbieding is?",
+    "Je kocht onlangs een handdoek. Kijk ook eens naar onze nieuwe badkamerlijn!",
+    "Met je huidige punten kun je €24,50 korting krijgen op je volgende bestelling."
+  ]
+}
