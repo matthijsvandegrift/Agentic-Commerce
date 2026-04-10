@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Header } from "@/components/layout/Header";
 import { ChatWindow } from "@/components/chat/ChatWindow";
 
 interface TenantInfo {
@@ -30,21 +29,8 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
-      <Header tenantName={tenant.name} tagline={tenant.tagline} />
-
-      <main className="flex-1 flex flex-col items-center min-h-0 p-4 pb-2">
-        <div className="w-full max-w-2xl flex-1 min-h-0">
-          <ChatWindow tenant={tenant} />
-        </div>
-
-        <div className="py-2 text-xs text-gray-300 flex items-center gap-1.5">
-          <span>Powered by</span>
-          <span className="font-semibold text-gray-400">Agentic Commerce</span>
-          <span>&middot;</span>
-          <span>AI Shopping Assistant</span>
-        </div>
-      </main>
+    <div className="h-screen flex flex-col overflow-hidden">
+      <ChatWindow tenant={tenant} />
     </div>
   );
 }

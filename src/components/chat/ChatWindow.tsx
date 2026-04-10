@@ -5,6 +5,7 @@ import { ChatInput } from "./ChatInput";
 import { MessageBubble } from "./MessageBubble";
 import { TypingIndicator } from "./TypingIndicator";
 import { CartItem, UserProfile } from "@/types";
+import { DemoSwitcher } from "@/components/layout/DemoSwitcher";
 
 interface TenantInfo {
   id: string;
@@ -234,7 +235,7 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
   const showSuggestions = messages.length <= 1 && !isLoading;
 
   return (
-    <div className="flex flex-col h-full bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+    <div className="flex flex-col h-full bg-white overflow-hidden">
       {/* Chat header */}
       <div
         className="px-5 py-3.5 text-white flex items-center gap-3"
@@ -271,6 +272,7 @@ export function ChatWindow({ tenant }: { tenant: TenantInfo }) {
             {cart.reduce((sum, item) => sum + item.quantity, 0)}
           </div>
         )}
+        <DemoSwitcher onScenario={(msg) => sendMessage(msg)} />
       </div>
 
       {/* Messages */}
