@@ -4,7 +4,7 @@ export const agentTools: Anthropic.Tool[] = [
   {
     name: "search_products",
     description:
-      "Search the product catalog. Use this to find products matching a customer's request. Always search before recommending products.",
+      "Search the product catalog. Always search before recommending. Be selective: use maxResults 1-2 for specific needs, 3 for browsing. Never dump a long list — quality over quantity.",
     input_schema: {
       type: "object" as const,
       properties: {
@@ -19,7 +19,7 @@ export const agentTools: Anthropic.Tool[] = [
         },
         maxResults: {
           type: "number",
-          description: "Maximum number of results to return (default 5)",
+          description: "Maximum number of results to return (default 3, max 5). Use 1-2 for specific requests, 3 for browsing.",
         },
       },
       required: ["query"],
